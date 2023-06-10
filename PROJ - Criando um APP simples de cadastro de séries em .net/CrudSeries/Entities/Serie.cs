@@ -11,8 +11,9 @@ namespace CrudSeries.Entities
         private int Ano { get; set; }
         private bool Excluido { get; set; }
 
-        public Serie(Genero genero, string titulo, string descricao, int ano)
+        public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
+            Id = id;
             Genero = genero;
             Titulo = titulo;
             Descricao = descricao;
@@ -25,7 +26,8 @@ namespace CrudSeries.Entities
             return $"Gênero: {Genero}\n" +
                    $"Título: {Titulo}\n" +
                    $"Descrição: {Descricao}\n" +
-                   $"Ano de Lançamento: {Ano}";
+                   $"Ano de Lançamento: {Ano}" +
+                   $"Excluído: {Excluido}";
         }
 
         public string GetTitulo()
@@ -41,6 +43,11 @@ namespace CrudSeries.Entities
         public void Excluir()
         {
             Excluido = true;
+        }
+
+        public bool retornaExlcuido()
+        {
+            return Excluido;
         }
     }
 }

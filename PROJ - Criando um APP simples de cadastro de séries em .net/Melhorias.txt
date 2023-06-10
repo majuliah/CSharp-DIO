@@ -1,0 +1,10 @@
+1 - Mudar o salvamento:
+	Deixar as séries salvas em um bloco de notas. Usar o StreamReader e o Stream Writer
+
+2 - Melhorar o código de atualização e cadastro - criar um método para isso.
+
+3 - Confrimação de exclusão.
+
+4 - Melhorar o excluído. Se estiver, não deixar editar.
+
+5 - Implementar o cadastro de filmes também. -> vai para outro arquivo de texto contendo somente os filmes.

@@ -4,6 +4,10 @@ using CrudSeries.Interfaces;
 
 namespace CrudSeries.Entities
 {
+    /// <summary>
+    /// Contem a lista de séries e as operações para manipulá-las
+    /// Ela faz o intermédio entre o programa e a memória. O "banco" é a lista.
+    /// </summary>
     public class SerieRepositorio : IRepositorio<Serie>
     {
         private List<Serie> listaSerie = new List<Serie>();
