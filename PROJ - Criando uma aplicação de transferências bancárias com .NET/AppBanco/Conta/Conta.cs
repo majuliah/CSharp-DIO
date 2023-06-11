@@ -2,7 +2,7 @@ using System.Globalization;
 using static System.Console;
 using AppBanco.Enums;
 
-namespace AppBanco.Conta
+namespace AppBanco
 {
     public class Conta
     {
