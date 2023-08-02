@@ -1,0 +1,6 @@
+﻿* propriedades -> permitem atribuir valores para dados específicos. *possuem get e set*
+
+** Quando usamos get e set vazios, o objeto pode receber qualquer valor.
+Porém é possível customizar a validação dessas propriedades quando receberem valores.
+
+//modificadores de acesso: public -> todos tem acesso, private -> somente a classe pode acessar
