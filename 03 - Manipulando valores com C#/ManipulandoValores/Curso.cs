@@ -22,13 +22,12 @@ namespace ManipulandoValores
         {
             return Alunos.Remove(aluno);
         }
-
+        
         public void ListarAlunos()
         {
             for (int i = 0; i < Alunos.Count; i++)
-            {
                 WriteLine($"Nº {i+1} - {Alunos[i].NomeCompleto}");
-            }
+            
         }
         
     }
