@@ -1,0 +1,19 @@
+﻿[
+  {
+    "Id": 2,
+    "Nome": "Jogo",
+    "Valor": 110.00
+  },
+  {
+    "Id": 3,
+    "Nome": "Livro",
+    "Valor": 130.00
+  },
+  {
+    "Id": 4,
+    "Nome": "Teclado",
+    "Valor": 150.00
+  }
+] 
+
+
