@@ -75,6 +75,8 @@ namespace NuggetSerializarEatributos
                 WriteLine($"Id: {venda.Id}, Produto: {venda.Nome}, Valor: {venda.Valor}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
             }
             
+            //atributos
+            
         }
     }
 }

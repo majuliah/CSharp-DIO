@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Id": 5,
+    "Nome_Produto": "Jogo",
+    "Valor": 110.00,
+    "DataAtual": "2023-09-24T01:19:16.1068922-03:00"
+  },
+  {
+    "Id": 6,
+    "Nome_Produto": "Livro",
+    "Valor": 130.00,
+    "DataAtual": "2023-09-24T01:19:16.1068922-03:00"
+  },
+  {
+    "Id": 7,
+    "Nome_Produto": "Teclado",
+    "Valor": 150.00,
+    "DataAtual": "2023-09-24T01:19:16.1068922-03:00"
+  }
+] 
+
+
