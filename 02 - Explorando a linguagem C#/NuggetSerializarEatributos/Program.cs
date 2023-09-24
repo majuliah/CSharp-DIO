@@ -31,44 +31,50 @@ namespace NuggetSerializarEatributos
             
             //🚀 Serialização na prática 🚀
 
-            Vendas venda1 = new Vendas(1, "Material Escritório", 25.00M);
-            
-            string serializado = JsonConvert.SerializeObject(venda1, Formatting.Indented);
-            //File.WriteAllText(@"Arquivos/vendas.json", serializado);
-            WriteLine(serializado);
-            
-            //serializando uma coleção
-            Vendas venda2 = new Vendas(2, "Jogo", 110.00M);
-            Vendas venda3 = new Vendas(3, "Livro", 130.00M);
-            Vendas venda4 = new Vendas(4, "Teclado", 150.00M);
-
-            List<Vendas> listaVendas = new List<Vendas>();
-            listaVendas.Add(venda2);
-            listaVendas.Add(venda3);
-            listaVendas.Add(venda4);
-            
-            //File.WriteAllText(@"Arquivos/vendas1.json", serializado);
-            string listaSerializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
-            
-            //dateTime em json
-            DateTime dataAtual = DateTime.Now;
-            
-            Vendas venda5 = new Vendas(5, "Jogo", 110.00M, dataAtual);
-            Vendas venda6 = new Vendas(6, "Livro", 130.00M, dataAtual);
-            Vendas venda7 = new Vendas(7, "Teclado", 150.00M, dataAtual);
-            
-            List<Vendas> listaVendas2 = new List<Vendas>();
-            listaVendas.Add(venda5);
-            listaVendas.Add(venda6);
-            listaVendas.Add(venda7);
-            
-            //File.WriteAllText(@"Arquivos/vendas2.json", serializado);
-            string listaSerializado2 = JsonConvert.SerializeObject(listaVendas2, Formatting.Indented);
+            // Vendas venda1 = new Vendas(1, "Material Escritório", 25.00M);
+            //
+            // string serializado = JsonConvert.SerializeObject(venda1, Formatting.Indented);
+            // //File.WriteAllText(@"Arquivos/vendas.json", serializado);
+            // WriteLine(serializado);
+            //
+            // //serializando uma coleção
+            // Vendas venda2 = new Vendas(2, "Jogo", 110.00M);
+            // Vendas venda3 = new Vendas(3, "Livro", 130.00M);
+            // Vendas venda4 = new Vendas(4, "Teclado", 150.00M);
+            //
+            // List<Vendas> listaVendas = new List<Vendas>();
+            // listaVendas.Add(venda2);
+            // listaVendas.Add(venda3);
+            // listaVendas.Add(venda4);
+            //
+            // //File.WriteAllText(@"Arquivos/vendas1.json", serializado);
+            // string listaSerializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
+            //
+            // //dateTime em json
+            // DateTime dataAtual = DateTime.Now;
+            //
+            // Vendas venda5 = new Vendas(5, "Jogo", 110.00M, dataAtual);
+            // Vendas venda6 = new Vendas(6, "Livro", 130.00M, dataAtual);
+            // Vendas venda7 = new Vendas(7, "Teclado", 150.00M, dataAtual);
+            //
+            // List<Vendas> listaVendas2 = new List<Vendas>();
+            // listaVendas.Add(venda5);
+            // listaVendas.Add(venda6);
+            // listaVendas.Add(venda7);
+            //
+            // //File.WriteAllText(@"Arquivos/vendas2.json", serializado);
+            // string listaSerializado2 = JsonConvert.SerializeObject(listaVendas2, Formatting.Indented);
             
             //Deserializando um objeto
+
+            string conteudoArquivo = File.ReadAllText("Arquivos/vendas2.json");
+            List<VendasDeserializadas> listaVenda = JsonConvert.DeserializeObject<List<VendasDeserializadas>>(conteudoArquivo);
+
+            foreach (VendasDeserializadas venda in listaVenda)
+            {
+                WriteLine($"Id: {venda.Id}, Produto: {venda.Nome}, Valor: {venda.Valor}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+            }
             
-
-
         }
     }
 }
