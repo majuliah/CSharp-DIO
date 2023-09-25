@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net.Http.Json;
-using System.Text.Json;
+using System.Linq;
 using Newtonsoft.Json;
 using NuggetSerializarEatributos.Models;
 using static System.Console;
@@ -40,7 +39,17 @@ namespace TiposEspeciais
 
             var tipoAnonimo = new { Nome = "Maju", Sobrenome = "Majulha", Altura = 1.80 };
             WriteLine($"Nome: {tipoAnonimo.Nome}, Sobrenome: {tipoAnonimo.Sobrenome}, Altura: {tipoAnonimo.Altura}");
-            
+
+            var listaAnonima = listaVendas.Select(x => new 
+            {
+                x.Nome, x.Valor
+            });
+
+            foreach (var item in listaAnonima)
+            {
+                WriteLine($"Produto: {item.Nome}, Valor: {item.Valor}");
+            }
+
         }
     }
 }
