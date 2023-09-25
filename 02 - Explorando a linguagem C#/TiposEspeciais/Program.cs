@@ -49,7 +49,18 @@ namespace TiposEspeciais
             {
                 WriteLine($"Produto: {item.Nome}, Valor: {item.Valor}");
             }
+            
+            //dynamics
+            dynamic variavelDinamica = 50;
+            WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, valor: {variavelDinamica}");
 
+            variavelDinamica = "Texto";
+            WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, valor: {variavelDinamica}");
+
+            variavelDinamica = false;
+            WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, valor: {variavelDinamica}");
+
+            
         }
     }
 }
