@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HospedagemHotel.Models
 {
@@ -18,7 +19,7 @@ namespace HospedagemHotel.Models
         {
             // TODO: Verificar se a capacidade é maior ou igual ao número de hóspedes sendo recebido
             // *IMPLEMENTE AQUI*
-            if (true)
+            if (Suite.CapacidadeHospedes <= hospedes.Count)
             {
                 Hospedes = hospedes;
             }
@@ -26,6 +27,8 @@ namespace HospedagemHotel.Models
             {
                 // TODO: Retornar uma exception caso a capacidade seja menor que o número de hóspedes recebido
                 // *IMPLEMENTE AQUI*
+                //throw new Exception(new ("Ocorreu um problema relacionado a capacidade"));
+                throw new Exception(new ("Ocorreu um problema relacionado a capacidade"));
             }
         }
 
@@ -36,9 +39,7 @@ namespace HospedagemHotel.Models
 
         public int ObterQuantidadeHospedes()
         {
-            // TODO: Retorna a quantidade de hóspedes (propriedade Hospedes)
-            // *IMPLEMENTE AQUI*
-            return 0;
+            return Hospedes.Count;
         }
 
         public decimal CalcularValorDiaria()
@@ -46,13 +47,13 @@ namespace HospedagemHotel.Models
             // TODO: Retorna o valor da diária
             // Cálculo: DiasReservados X Suite.ValorDiaria
             // *IMPLEMENTE AQUI*
-            decimal valor = 0;
+            decimal valor = Suite.ValorDiaria;
 
             // Regra: Caso os dias reservados forem maior ou igual a 10, conceder um desconto de 10%
             // *IMPLEMENTE AQUI*
-            if (true)
+            if (DiasReservados >= 10)
             {
-                valor = 0;
+                valor -= (valor * 0.10m);
             }
 
             return valor;

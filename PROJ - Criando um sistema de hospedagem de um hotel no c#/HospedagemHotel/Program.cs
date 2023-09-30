@@ -23,7 +23,7 @@ namespace HospedagemHotel
             Suite suite = new Suite(tipoSuite: "Premium", capacidadeHospedes: 2, valorDiaria: 30);
 
             // Cria uma nova reserva, passando a suíte e os hóspedes
-            Reserva reserva = new Reserva(diasReservados: 5);
+            Reserva reserva = new Reserva(diasReservados: 15);
             reserva.CadastrarSuite(suite);
             reserva.CadastrarHospedes(hospedes);
 
