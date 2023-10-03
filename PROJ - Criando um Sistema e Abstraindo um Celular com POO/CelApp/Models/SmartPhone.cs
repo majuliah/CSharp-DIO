@@ -7,11 +7,17 @@ namespace CelApp.Models
     {
         public string Numero { get; set; }
         // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        protected string Model { get; set; }
+        protected string IMEI { get; set; }
+        protected int Memoria { get; set; }
 
-        public SmartPhone(string numero)
+        public SmartPhone(string numero, string model, string imei, int memoria)
         {
             Numero = numero;
             // TODO: Passar os parâmetros do construtor para as propriedades
+            Model = model;
+            IMEI = imei;
+            Memoria = memoria;
         }
 
         public void Ligar()
