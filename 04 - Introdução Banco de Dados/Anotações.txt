@@ -1,0 +1,60 @@
+🎭INTRO A BANCO DE DADOS:
+
+👍Um banco de dados é uma coleção organizada de informações estruturadas, normalmente armazenadas eletronicamente em um sistema de computador. 
+👍Ficam em um local onde podemos identificar e recuperar rapidamente depois.
+👍Possui uma organização que precisa ser obedecida para que os dados sejam armazenados corretamente.
+👍É um repositório de dados disponibilizado para diversos sistemas.
+👍É um sistema muito robusto e inteligente pois é acessado por diversos sistemas. Trabalha de maneira inteligente e conjunta para fornecer informações consultadas.
+
+🎭TIPOS DE BANCOS DE DADOS: RELACIONAL 
+
+👍 estruturados são organizados em tabelas, colunas e linhas que se relacionam entre si. Coluna é um tipo de dado e as linhas são os dados em si.
+👍 Criamos deiferentes tabelas que possuem valores que se associam com outras tabelas.
+👍 SQL Server, Oracle Database, MySQL são tipos de bancos de dados disponíveis no mercado
+
+🎭ENTENDENDO TABELAS 
+
+👍 Tabelas são dados estruturados e organizados logicamente em formato de linha e coluna, é uma planilha 
+👍 Quando uma tabela se relaciona com outra, os dados são apontados e o dado fica mais robusto
+
+🎭TIPOS DE BANCOS DE DADOS: NÃO RELACIONAL 
+
+👍 Armazenamos dados de forma não estruturada ou semi estruturada. Não possui regras rígidas quanto no banco relacional.
+👍 É possível armazenar e obter dados de forma muito mais rápida
+👍 Possui escalabilidade maior
+👍 Possui uma performance maior
+
+🎭TIPOS DE DADOS:
+
+👍 Dados estruturados: matriz(possui linha e coluna), utilizado por bancos relacionais
+👍 						Possui regras rígidas  padrões esperados
+👍						Um dado deletado ou adicionado, adiciona o registro para todas as tabelas
+👍 Dados Semi-Estruturados:
+👍						Possui padrões mas não é necessário seguir estritamente 
+👍						Pode ter infromações adicionais sem que todos os campos tenham aquela infromação
+👍						Possui diferentes interpretações
+
+
+🎭ENTENDENDO UM DBMS:
+
+👍 Software utilizado para acessar, manipular e monitorar um sistema de banco de dados.
+👍 Ele apresenta interface amigável para que os dados sejam monitorados, acessados, etc
+
+🎭LINGUAGEM SQL:
+
+👍 STRUCTURED QUERY LANGUAGE -> é uma linguagem de banco de dados usada para consulta e manipulação de dados.
+👍 Fornece comandos padrão para diferentes bancos de dados.
+👍 Linguagem de alto nível e mais compreensível.
+👍 É possível fazer manipulação e inserção de forma fácil.
+
+👍 DDL -> Data Definition Language                   CREATE, DROP, ALTER, TRUNCATE
+👍 DCL -> Data Control Language	       				  GRANT, REVOKE
+👍 DML -> Data Manipulation Language				  INSERT, UPDATE, DELETE			  
+👍 TCL -> Transaction Control Language 				  COMMIT, ROLLBACK, SAVE POINT
+👍 DQL -> Data Query Language						  SELECT, WHERE, GROUP, ORDER, JOIN
+
+🎭 DATABASES:
+
+👍Database são coleções de dados estruturados e agrupados de forma concisa. 
+👍Um único servidor de banco de dados pode ter diversos databases.
+👍Cada agrupamento condiz a um contexto.
