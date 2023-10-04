@@ -1,0 +1,2 @@
+Constraints -> São regras que devem ser seguidas para inserções em uma tabela. Exemplos:
+NOT NULL, UNIQUE, CHECK, DEFAULT, PRIMARY KEY, FOREIGN KEY

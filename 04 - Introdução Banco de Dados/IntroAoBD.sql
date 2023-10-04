@@ -53,3 +53,84 @@ CREATE TABLE Produtos(
     Valor DECIMAL(13,2) NOT NULL,
     Tamanho VARCHAR(5) NULL
 )
+
+DROP TABLE IF EXISTS dbo.Produtos
+
+CREATE TABLE Produtos (
+	Id int IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	Nome varchar(255) NOT NULL,
+	Cor varchar(50) NULL,
+	Preco decimal(13, 2) NOT NULL,
+	Tamanho varchar(5) NULL,
+	Genero char(1) NULL
+)
+
+SELECT * FROM Produtos;
+
+--usando count
+SELECT COUNT(*) TotalProdutos FROM Produtos;
+SELECT COUNT(*) QuantidadeM FROM Produtos WHERE Tamanho = 'M';
+
+--usando sum
+SELECT SUM(Preco) PrecoTotal FROM Produtos;
+SELECT SUM(Preco) PrecoTotal FROM Produtos WHERE Tamanho = 'P';
+
+--usando max e min
+SELECT MAX(Preco) PrecoMaximo FROM Produtos;
+SELECT MIN(Preco) PrecoMinimo FROM Produtos;
+SELECT MAX(Preco) PrecoMinimoG FROM Produtos WHERE Tamanho = 'G';
+
+--usando media
+SELECT AVG(Preco) PrecoMinimo FROM Produtos;
+
+--concatenando colunas
+SELECT Nome, Cor FROM Produtos;
+SELECT Nome + ' - ' + Cor NomeEcor FROM Produtos;
+SELECT Nome + ' - ' + Cor FROM Produtos;
+
+--upper e lower
+SELECT LOWER(Nome) + ' - ' + LOWER(Cor) FROM Produtos;
+SELECT UPPER(Nome) + ' - ' + UPPER(Cor) FROM Produtos;
+
+--adicionando nova coluna
+ALTER TABLE Produtos ADD DataCadastro DATETIME2;
+UPDATE Produtos SET DataCadastro = GETDATE();
+DROP COLUMN DataCadastro;
+
+SELECT * FROM Produtos;
+
+--formatando datas
+SELECT UPPER(Nome) + ' - ' + UPPER(Cor), FORMAT(DataCadastro, 'dd-MM-yyyy') DataDeCadastro FROM Produtos;
+
+--entendendo o group by
+SELECT 
+	Tamanho,
+	COUNT(*) Quantidade 
+FROM Produtos
+	WHERE Tamanho <> ''
+	GROUP BY Tamanho
+	ORDER BY Quantidade DESC;
+
+--Primary Key -> chave única que identifica cada registro na tabela
+--Foreign Key -> Chave que identifica um registro existente em outra tabela
+
+CREATE TABLE Enderecos (
+	Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	IdCliente int NULL,
+	Rua VARCHAR(255) NULL,
+	Bairro VARCHAR(255) NULL,
+	Cidade VARCHAR(255) NULL,
+	Estado CHAR(2) NULL,
+
+	CONSTRAINT FK_ENDERECOS_CLIENTES FOREIGN KEY(IdCliente)
+	REFERENCES Clientes(Id)
+)
+
+INSERT INTO  Enderecos VALUES (4,'Rua teste', 'Bairro Teste', 'Cidade Teste', 'MJ');
+
+SELECT * FROM Clientes WHERE Id = 4;
+SELECT * FROM Enderecos WHERE IdCliente = 4;
+
+--INNER JOIN
+SELECT * FROM Clientes INNER JOIN Enderecos ON Clientes.Id = Enderecos.IdCliente WHERE Clientes.Id = 4;
+SELECT Clientes.Nome, Clientes.Sobrenome, Clientes.Email, Enderecos.Bairro, Enderecos.Cidade, Enderecos.Rua FROM Clientes INNER JOIN Enderecos ON Clientes.Id = Enderecos.IdCliente WHERE Clientes.Id = 4;
