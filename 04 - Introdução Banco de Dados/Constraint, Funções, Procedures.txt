@@ -1,2 +1,11 @@
 Constraints -> São regras que devem ser seguidas para inserções em uma tabela. Exemplos:
 NOT NULL, UNIQUE, CHECK, DEFAULT, PRIMARY KEY, FOREIGN KEY
+
+NOT NULL -> Não permite que um valor seja nulo
+UNIQUE -> determinado valor da tabela deve ser único e não deve se repetir
+CHECK -> verifica determinada condição. exemplo: não aceitar valores diferentes dos pré determinados, o check faz essa validação
+DEFAULT -> define um determinado padrão caso o valor não seja passado
+
+PROCEDURE: Um código sql que pode ser salvo diretamente no banco de dados permitindo aproveitar um script 
+
+FUNCTION: Código que pode ser salvo diretamente no Banco de dados
