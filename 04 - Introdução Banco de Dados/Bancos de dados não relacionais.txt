@@ -1,0 +1,52 @@
+👀 BANCOS DE DADOS NÃO RELACIONAIS
+
+🎭 os dados não são armazenados em tabelas, são armazenados de forma não estruturada e semi estruturada. Possui o mínimo de regras possível. 
+	👍Semi-Estruturado: arquivos JSON. seguem 		   padrão e não possuem regras fixas. 
+	👍 mongoDB: banco não relacional rientado a 	       	    documentos.
+
+
+
+
+
+
+
+
+ Querys: 
+
+select:	db.produtos.find({Cor:"Colorido"});
+
+select:	db.produtos.find({Cor:"Colorido"}, {Nome: 1, Preco: 1, _id: 0});
+
+select:	db.produtos.find({Cor:"Colorido"}, {Nome: 1, Preco: 1, _id: 0}).sort({Preco: -1});
+
+select: db.produtos.find({Cor:"Colorido"}, {Nome: 1, Preco: 1, _id: 0}).sort({Preco: -1})
+
+
+update: db.podutos.updateOne({Id: 3}, {$set: {Preco: 15.99}})
+
+
+delete: db.produtos.deleteOne({Id:2})
+delete: db.produtos.deleteMany({Id:2}, {Id: 4})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
