@@ -1,0 +1,3 @@
+	🎃Introdução as APIs
+		🤔O que é uma API?
+		   Uma API (Application Programming Interface) é uma forma de comunicação entre computadores ou programas de computadores. É um software que fornece 			   informação para outro software. É uma forma de integração entre sistemas. 
