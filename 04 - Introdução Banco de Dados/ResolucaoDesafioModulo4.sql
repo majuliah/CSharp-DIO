@@ -24,8 +24,7 @@ select * from filmes where Ano > 2000 ORDER BY Ano;
 select * from Filmes WHERE Duracao > 100 AND Duracao < 150 ORDER BY Duracao;
 
 --7 - Buscar a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
-
-
+SELECT Duracao, Ano, COUNT(*) as Quantidade FROM Filmes GROUP BY Ano ORDER BY Duracao;
 -- 8 - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
 Select * from Atores;
 select PrimeiroNome, UltimoNome, Genero from Atores WHERE Genero = 'M';
