@@ -4,6 +4,12 @@ namespace iniciandoAPIs.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+///<summary>
+///uma controller é uma classe que agrupa requisições http
+///tudo relacionado a previsões do tempo está em uma única controller
+///um agrupamento de domínios em comum, agrupamento de ações de uma classe
+///
+///<summary/>
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
