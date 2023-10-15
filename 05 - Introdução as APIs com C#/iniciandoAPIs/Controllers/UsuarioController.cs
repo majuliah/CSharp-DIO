@@ -17,5 +17,12 @@ namespace iniciandoAPIs.Controllers
 
             return Ok(obj);
         }
+
+        [HttpGet("Apresentar/{nome}")]
+        public ActionResult Apresentar(string nome)
+        {
+            var mensagem = $"Olá {nome}, seja bem vindo!";
+            return Ok(new{mensagem});
+        }
     }
 }
