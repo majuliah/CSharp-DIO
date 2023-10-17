@@ -1,0 +1,5 @@
+	🤓 O entity Framework é um ORM criado para facilitar a integração com o banco de dados, mapeando tabelas e gerando comandos SQL de forma automática, para não criarmos de forma manual e repetitiva.
+	
+	🧐CRUD -> Create Read Update Delete. Possuem Contextos. Contextos são classes que centralizam informações do banco de dados.
+
+	😏Migrations -> Mapeamento das classes para transformá-los em tabelas.
