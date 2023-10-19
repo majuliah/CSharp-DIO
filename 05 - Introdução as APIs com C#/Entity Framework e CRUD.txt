@@ -2,4 +2,4 @@
 	
 	🧐CRUD -> Create Read Update Delete. Possuem Contextos. Contextos são classes que centralizam informações do banco de dados.
 
-	😏Migrations -> Mapeamento das classes para transformá-los em tabelas.
+	😏Migrations -> Mapeamento das classes para transformá-los em tabelas. Com elas podemos refletir mudanças para o banco de dados
