@@ -3,3 +3,12 @@
 	🧐CRUD -> Create Read Update Delete. Possuem Contextos. Contextos são classes que centralizam informações do banco de dados.
 
 	😏Migrations -> Mapeamento das classes para transformá-los em tabelas. Com elas podemos refletir mudanças para o banco de dados.
+
+
+
+	🏃‍♀️Verbos HTTP -> 
+			POST: Create, 201 created. 404 not found e 409 conflit
+			GET: Read, 200 ok. 404 not found
+			PUT: Update/Replace por completo, 200 OK. 405 not allowed, 204 no content, 404 not found
+			PATCH: Update/Modify parcial, 200 OK. 405 not allowed, 204 no content, 404 not found
+			DELETE: Delete, 200 OK. 404 not found, 405 not allowed

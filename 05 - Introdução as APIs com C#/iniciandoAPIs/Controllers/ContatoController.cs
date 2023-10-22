@@ -65,5 +65,15 @@ namespace iniciandoAPIs.Controllers
             _context.SaveChanges();
             return NoContent();
         }
+
+        //crud completo
+        //get com nome
+        [HttpGet("ObterPorNome")]
+        public IActionResult ObterTodos(string nome)
+        {
+            var contatos = _context.Contatos.Where(x => x.Nome.Contains(nome));
+            return Ok(contatos);
+        }
+
     }
 }
