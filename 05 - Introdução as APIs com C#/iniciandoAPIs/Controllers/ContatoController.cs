@@ -21,5 +21,16 @@ namespace iniciandoAPIs.Controllers
             _context.SaveChanges();
             return Ok(contato);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult ObterId(int id)
+        {
+            var contato = _context.Contatos.Find(id);
+            
+            if(contato == null)
+                return NotFound();
+            
+            return Ok(contato);
+        }
     }
 }
