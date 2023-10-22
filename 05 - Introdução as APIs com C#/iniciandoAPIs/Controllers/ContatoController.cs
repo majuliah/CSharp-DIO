@@ -52,5 +52,18 @@ namespace iniciandoAPIs.Controllers
             return Ok(contatoBanco);
             
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletarId(int id)
+        {
+            var contatoBanco = _context.Contatos.Find(id);
+
+            if(contatoBanco == null)
+                return NotFound();
+            
+            _context.Contatos.Remove(contatoBanco);
+            _context.SaveChanges();
+            return NoContent();
+        }
     }
 }
