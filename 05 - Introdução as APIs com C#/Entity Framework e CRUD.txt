@@ -12,3 +12,19 @@
 			PUT: Update/Replace por completo, 200 OK. 405 not allowed, 204 no content, 404 not found
 			PATCH: Update/Modify parcial, 200 OK. 405 not allowed, 204 no content, 404 not found
 			DELETE: Delete, 200 OK. 404 not found, 405 not allowed
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
